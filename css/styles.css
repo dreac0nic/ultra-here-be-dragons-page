@@ -1,0 +1,225 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #efefef;
+	font-family: flamenco;
+}
+
+h1 {
+	margin-bottom: 5vh;
+	font-size: 4em;
+	text-shadow: 2px 2px rgba(0.1, 0.1, 0.1, 0.8);
+}
+
+h1 img {
+	margin: 0px 0.4em;
+	height: 1.2em;
+	display: inline;
+}
+
+h1 span {
+	border-bottom: 2px dashed #efefef;
+}
+
+.content {
+	margin: 10vh 0px;
+	position: absolute;
+	width: 100vw;
+	top: 0;
+	z-index: 10;
+	text-align: center;
+}
+
+.yt {
+	margin: 0px auto;
+	position: relative;
+	overflow: hidden;
+	width: 60vw;
+	box-shadow: 12px 12px 4px rgba(0.1, 0.1, 0.1, 0.8);
+}
+
+.yt::after {
+	display: block;
+	content: "";
+	padding-top: 56.25%
+}
+
+.yt iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.collage {
+	background: #d23b14;
+	background: linear-gradient(to top, #90290e, #d23b14);
+	background-image: url("../images/flames.gif");
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+}
+
+.frames {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.frames li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 5px;
+	height: 5px;
+	bottom: -100px;
+	animation: rad 30s linear infinite;
+	transform-origin: center
+}
+
+.frames li img {
+	animation: spinners 30s linear infinite;
+	border-radius: 25px;
+}
+
+
+/* First image */
+.frames li:nth-child(1) {
+	left: 10%;
+}
+
+
+/* Second image */
+.frames li:nth-child(2) {
+	left: 70%;
+	animation-duration: 12s;
+}
+
+.frames li:nth-child(2) img {
+	animation-duration: 12s;
+}
+
+
+/* Third image */
+.frames li:nth-child(3) {
+	left: 40%;
+	animation-delay: 10s;
+	animation-duration: 25s;
+}
+
+.frames li:nth-child(3) img {
+	animation-delay: 10s;
+	animation-duration: 25s;
+}
+
+
+/* Fourth image */
+.frames li:nth-child(4) {
+	left: 60%;
+	animation-delay: 5s;
+	animation-duration: 18s;
+}
+
+.frames li:nth-child(4) img {
+	animation-delay: 5s;
+	animation-duration: 18s;
+}
+
+
+/* Fifth image */
+.frames li:nth-child(5) {
+	left: 70%;
+	animation-delay: 10s;
+}
+
+.frames li:nth-child(5) img {
+	animation-delay: 10s;
+}
+
+
+/* Sixth image */
+.frames li:nth-child(6) {
+	left: 30%;
+	animation-delay: 20s;
+	animation-duration: 10s;
+}
+
+.frames li:nth-child(6) img {
+	animation-delay: 20s;
+	animation-duration: 10s;
+}
+
+
+/* Seventh image */
+.frames li:nth-child(7) {
+	left: 65;
+	animation-delay: 15s;
+	animation-duration: 60s;
+}
+
+.frames li:nth-child(7) img {
+	animation-delay: 15s;
+	animation-duration: 60s;
+}
+
+
+/* Eighth image */
+.frames li:nth-child(8) {
+	left: 50%;
+	animation-delay: 20s;
+	animation-duration: 45s;
+}
+
+.frames li:nth-child(8) img {
+	animation-delay: 20s;
+	animation-duration: 45s;
+}
+
+
+/* Ninth image */
+.frames li:nth-child(9) {
+	left: 20%;
+	animation-delay: 10s;
+	animation-duration: 35s;
+}
+
+.frames li:nth-child(9) img {
+	animation-delay: 10s;
+	animation-duration: 35s;
+}
+
+
+@keyframes rad {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0.6
+	}
+
+    100% {
+		transform: translateY(-120vh);
+		opacity: 0;
+	}
+}
+
+@keyframes spinners {
+	0% {
+		transform: rotate(0deg);
+	}
+
+    100% {
+		transform: rotate(720deg);
+	}
+}
+
+@font-face {
+	font-family: flamenco;
+	src: url("../fonts/Flamenco/Flamenco-Regular.ttf")
+}
